@@ -1,0 +1,27 @@
+/*
+Template Name: Skote - Admin & Dashboard Template
+Author: Themesbrand
+Version: 3.1.0
+Website: https://themesbrand.com/
+Contact: themesbrand@gmail.com
+File: Custom Bootstrap Css File
+*/
+
+
+//Core files
+@use "~bootstrap/scss/bootstrap";
+@use "./node_modules/bootstrap/scss/functions";
+@use "./node_modules/bootstrap/scss/variables";
+@use "variables-dark";
+
+@use "custom/components/reboot";
+@use "custom/components/backgrounds";
+@use "custom/components/badge";
+@use "custom/components/buttons";
+@use "custom/components/breadcrumb";
+@use "custom/components/card";
+@use "custom/components/dropdown";
+@use "custom/components/nav";
+@use "custom/components/table";
+@use "custom/components/pagination";
+@use "custom/components/progress";
