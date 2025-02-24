@@ -14,18 +14,24 @@ import ForgetPwd from "../pages/Authentication/ForgetPassword"
 import Dashboard from "../pages/Dashboard/index"
 
 const authProtectedRoutes = [
-  { path: "/dashboard", component: <Dashboard/> },
-
-  // //profile
-  { path: "/profile", component: <UserProfile/> },
-
-  // this route should be at the end of all other routes
-  // eslint-disable-next-line react/display-name
-   {
-    path: "/",
-    exact: true,
-    component: < Navigate to="/dashboard" />,
+  {
+    path: "/lecture",
+    children: [
+      {
+        path: "/lecture/dashboard",
+        component: <Dashboard />
+      }
+    ]
   },
+  {
+    path: "/student",
+    children: [
+      {
+        path: "/student/dashboard",
+        component: <Dashboard />
+      }
+    ]
+  }
 ]
 
 const publicRoutes = [

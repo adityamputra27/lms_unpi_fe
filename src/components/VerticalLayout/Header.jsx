@@ -120,7 +120,7 @@ const Header = props => {
             </form>
 
             <Dropdown
-              className="dropdown-mega d-none d-lg-block ms-2"
+              className="dropdown-mega d-none d-lg-none ms-2"
               isOpen={megaMenu}
               toggle={() => {
                 setmegaMenu(!megaMenu);
@@ -312,7 +312,7 @@ const Header = props => {
             <LanguageDropdown />
 
             <Dropdown
-              className="d-none d-lg-inline-block ms-1"
+              className="d-none d-lg-none ms-1"
               isOpen={socialDrp}
               toggle={() => {
                 setsocialDrp(!socialDrp);
@@ -391,7 +391,7 @@ const Header = props => {
                onClick={() => {
                 props.showRightSidebarAction(!props.showRightSidebar);
               }}
-              className="dropdown d-inline-block"
+              className="dropdown d-none"
             >
               <button
                 type="button"

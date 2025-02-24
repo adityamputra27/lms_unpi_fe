@@ -84,6 +84,13 @@ const App = (props) => {
             }
             key={idx}
             exact={true}
+            children={route.children?.map((child, childIdx) => (
+              <Route key={childIdx} path={child.path} element={
+                <Authmiddleware>
+                  <Layout>{child.component}</Layout>
+                </Authmiddleware>
+              } />
+            ))}
           />
         ))}
       </Routes>

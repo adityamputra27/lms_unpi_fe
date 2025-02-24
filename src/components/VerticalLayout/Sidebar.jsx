@@ -5,40 +5,33 @@ import withRouter from "../Common/withRouter";
 
 //i18n
 import { withTranslation } from "react-i18next";
-import SidebarContent from "./SidebarContent";
+import SidebarContent from "./LectureSidebarContent";
 
 import { Link } from "react-router-dom";
-
-import logo from "../../assets/images/logo.svg";
-import logoLightPng from "../../assets/images/logo-light.png";
-import logoLightSvg from "../../assets/images/logo-light.svg";
-import logoDark from "../../assets/images/logo-dark.png";
+import logoLightPng from "../../assets/images/unpi/logo.png";
+import LectureSidebarContent from "./LectureSidebarContent";
+import StudentSidebarContent from "./StudentSidebarContent";
 
 const Sidebar = (props) => {
+  const pathnameURL = window.location.pathname.split('/')
+
   return (
     <React.Fragment>
       <div className="vertical-menu">
-        <div className="navbar-brand-box">
-          <Link to="/" className="logo logo-dark">
-            <span className="logo-sm">
-              <img src={logo} alt="" height="22" />
-            </span>
+        <div className="navbar-brand-box d-flex align-items-center justify-center p-1">
+          <Link to="/" className="logo logo-light ms-3">
             <span className="logo-lg">
-              <img src={logoDark} alt="" height="17" />
+              <img src={logoLightPng} alt="" height="35" />
             </span>
           </Link>
 
-          <Link to="/" className="logo logo-light">
-            <span className="logo-sm">
-              <img src={logoLightSvg} alt="" height="22" />
-            </span>
-            <span className="logo-lg">
-              <img src={logoLightPng} alt="" height="19" />
-            </span>
-          </Link>
+          <div className="d-flex flex-column text-left justify-content-start align-items-start ps-3">
+            <span className="text-white fw-bolder fs-3">E-Learning</span>
+            <span className="text-white">UNPI Cianjur</span>
+          </div>
         </div>
         <div data-simplebar className="h-100">
-          {props.type !== "condensed" ? <SidebarContent /> : <SidebarContent />}
+          {pathnameURL[1] === "lecture" ? <LectureSidebarContent /> : <StudentSidebarContent />}
         </div>
 
         <div className="sidebar-background"></div>

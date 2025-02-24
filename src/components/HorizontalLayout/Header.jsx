@@ -86,6 +86,11 @@ const Header = (props) => {
                   <img src={logoLight} alt="" height="19" />
                 </span>
               </Link>
+
+              <div className="d-flex flex-column text-left justify-content-start align-items-start ps-3">
+                <span className="text-white fw-bolder fs-3">E-Learning</span>
+                <span className="text-white">UNPI Cianjur</span>
+              </div>
             </div>
 
             <button
